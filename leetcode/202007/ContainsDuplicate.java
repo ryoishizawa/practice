@@ -1,3 +1,5 @@
+// Date: 10 Jul 2020
+
 // 	Accepted
 class Solution1 {
     public boolean containsDuplicate(int[] nums) {

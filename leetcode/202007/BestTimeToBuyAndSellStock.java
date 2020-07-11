@@ -1,3 +1,5 @@
+// Date: 10 Jul 2020
+
 // accepted, but not good because time complexity is O(n^2)
 class Solution1 {
     public int maxProfit(int[] prices) {

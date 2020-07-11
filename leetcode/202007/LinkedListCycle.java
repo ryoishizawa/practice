@@ -1,3 +1,5 @@
+// Date: 11 Jul 2020
+
 // wrong answer
 public class Solution0 {
     public boolean hasCycle(ListNode head) {
