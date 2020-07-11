@@ -22,3 +22,22 @@ class Solution1 {
         return node;
     }
 }
+
+// solved by myself after understanding recursive solution.
+class Solution2 {
+    public ListNode reverseList(ListNode head) {
+        ListNode prevNode = null;
+        ListNode nextNode = null;
+        while (head != null && head.next != null) {
+            nextNode = head.next;
+            head.next = prevNode;
+            prevNode = head;
+            head = nextNode;
+        }
+        if (head != null) {
+            head.next = prevNode;
+        }
+        return head;
+    }
+}
+
