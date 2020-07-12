@@ -1,7 +1,7 @@
 // Date: 11 Jul 2020
 
 // Accepted. (Brute force, slow)
-class Solution {
+class Solution1 {
     public int maxArea(int[] height) {
         int maxDimension = 0;
         for (int i = 0; i < height.length; i++) {
@@ -15,5 +15,23 @@ class Solution {
             }
         }
         return maxDimension;
+    }
+}
+
+// Better solution from leetcode, using Two Pointer approach.
+class Solution2 {
+    public int maxArea(int[] height) {
+        int maxArea = 0;
+        int left = 0;
+        int right = height.length - 1;
+        while (left < right) {
+            maxArea = Math.max(maxArea, Math.min(height[left], height[right]) * (right - left));
+            if (height[left] < height[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+        return maxArea;
     }
 }
